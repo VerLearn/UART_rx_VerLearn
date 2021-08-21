@@ -28,7 +28,8 @@ module tb();
     clock=0;
     $dumpfile("tb.vcd");
     $dumpvars;
-    $monitor("Output --- %b",output_stream);
+    $display("Sent byte --- 10010011");
+    $monitor("Received byte --- %b",output_stream);
     check(8'b10010011);
     #(bit_period);
     if(output_stream==8'b10010011) begin
